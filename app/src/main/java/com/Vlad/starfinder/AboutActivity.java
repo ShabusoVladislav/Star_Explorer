@@ -47,7 +47,7 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View view) {
         if(view.equals(btn_code)){
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://developer.android.com"));
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/ShabusoVladislav/Star_Explorer/tree/main"));
             startActivity(intent);
         }
     }
