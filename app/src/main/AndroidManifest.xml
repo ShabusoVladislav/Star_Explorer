@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:versionCode="2"
-    android:versionName="2.1"
+    android:versionName="2.1.1"
     package="com.Vlad.starfinder">
 
     <uses-sdk android:minSdkVersion="24"/>

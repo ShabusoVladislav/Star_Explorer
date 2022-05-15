@@ -16,6 +16,7 @@ import com.Vlad.starfinder.bluetooth.ConnectThread;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 public class StarsListAdapter extends RecyclerView.Adapter<StarsListAdapter.MyViewHolder> {
@@ -51,23 +52,29 @@ public class StarsListAdapter extends RecyclerView.Adapter<StarsListAdapter.MyVi
             public void onClick(View view) {
                 int position = Integer.parseInt(String.valueOf(holder.star_order.getText())) - 1;
 
-                Date date = new Date();
-                SimpleDateFormat formatForDateNow = new SimpleDateFormat("HH.mm.ss");
+                Calendar calendar = Calendar.getInstance();
+                int year = calendar.get(Calendar.YEAR);
+                int day = calendar.get(Calendar.DAY_OF_YEAR);
+                int hour = calendar.get(Calendar.HOUR_OF_DAY);
+                int min = calendar.get(Calendar.MINUTE);
+                int sec = calendar.get(Calendar.SECOND);
+
+                long timeDifference = (long) ((36_524 * 20 + ((year - 1) * 365.47) + day) * 24 * 3_600 + (hour * 3_600) + (min * 60) + sec) - 63_757_843_200L;
 
                 Toast.makeText(context, stars_ascension.get(position) + ", "
                         + stars_declination.get(position) + " наведено в "
-                        + stars_name.get(position) + "!\n"
-                        + "Текущее время: " + formatForDateNow.format(date), Toast.LENGTH_LONG).show();
+                        + stars_name.get(position) + "!\n", Toast.LENGTH_LONG).show();
                 ConnectThread.sendMessage(String.valueOf(stars_ascension.get(position)));
                 ConnectThread.sendMessage("+");
                 ConnectThread.sendMessage(String.valueOf(stars_declination.get(position)));
                 ConnectThread.sendMessage("+");
-                ConnectThread.sendMessage(formatForDateNow.format(date));
+                ConnectThread.sendMessage(String.valueOf(timeDifference));
                 ConnectThread.sendMessage("+");
 
-                Log.d(TAG, String.valueOf(stars_ascension.get(position)));
-                Log.d(TAG, String.valueOf(stars_declination.get(position)));
-                Log.d(TAG, formatForDateNow.format(date));
+                Log.d(TAG, "Right ascension: " + String.valueOf(stars_ascension.get(position)));
+                Log.d(TAG, "Declination: " + String.valueOf(stars_declination.get(position)));
+                Log.d(TAG, "Date: " + year + " " + day + " " + hour + ":" + min + ":" + sec);
+                Log.d(TAG, "Разница времени: " + String.valueOf(timeDifference));
             }
         });
     }

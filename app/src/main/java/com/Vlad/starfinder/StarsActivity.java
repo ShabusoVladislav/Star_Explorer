@@ -102,12 +102,6 @@ public class StarsActivity extends AppCompatActivity {
                 stars_name.add(String.join(" ", myCursor.getString(1).split("_")));
                 stars_ascension.add(myCursor.getDouble(2));
                 stars_declination.add(myCursor.getDouble(3));
-
-                Log.d(TAG, "id: " + stars_id.get(stars_id.size() - 1));
-                Log.d(TAG, "id: " + stars_name.get(stars_name.size() - 1));
-                Log.d(TAG, "id: " + stars_ascension.get(stars_ascension.size() - 1));
-                Log.d(TAG, "id: " + stars_declination.get(stars_declination.size() - 1));
-
             }
             stars_count.setText("Всего звезд: " + stars_id.size());
         }
