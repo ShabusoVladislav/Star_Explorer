@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="black">#FF000000</color>
+    <color name="color_black">#000000</color>
+    <color name="primaryColor">#c5cae9</color>
+    <color name="primaryLightColor">#f8fdff</color>
+    <color name="primaryDarkColor">#9499b7</color>
+    <color name="secondaryColor">#e0e0e0</color>
+    <color name="secondaryDarkColor">#aeaeae</color>
+    <color name="material_red">#d50000</color>
+</resources>

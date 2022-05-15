@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Star Explorer</string>
+    <string name="bluetooth_on_off">Включить Bluetooth</string>
+    <string name="bluetooth_off">Bluetooth выключен</string>
+    <string name="start_search">Поиск устройств</string>
+    <string name="bluetooth_not_supported">Bluetooth не поддерживается</string>
+    <string name="stop_search">Остановить поиск</string>
+    <string name="disconnect">Отключиться</string>
+    <string name="title_activity_menu_full_screen">MenuFullScreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_switch_network">Включить GPS?</string>
+    <string name="msg_switch_network">Для поиска устройств необходимо включить геолокацию</string>
+    <string name="hand_controller">Ручное управление</string>
+    <string name="list_of_stars">Список звёзд</string>
+    <string name="about">О приложении</string>
+    <string name="text_about_1">Star Explorer — приложение, позволяющее управлять телескопом. Управление может осуществляться с помощью кнопок, находящихся во вкладке \"Ручное управление\", а также с помощью выбора звезды из списка имеющихся в таблице звезд во вкладке \"Список звезд\".</string>
+    <string name="code">Исходный код приложения</string>
+    <string name="error_connect">\"Ошибка подключения к устройству \"</string>
+    <string name="successfully_connected">\"Успешно подключено к устройству \"</string>
+    <string name="text_about_2">Приложение было создано в качестве курсового проекта. \n\nСоздатель приложения: Шабусов Владислав (студент 2-го курса 10-ой группы Механико-Математического факультета) \n\nТелескоп предоставил: Лемачко Феодосий (студент 2-го курса 4-ой группы Механико-Математического факультета)</string>
+    <string name="up">UP</string>
+    <string name="left">LEFT</string>
+    <string name="right">RIGHT</string>
+    <string name="down">DOWN</string>
+    <string name="bt_icon">BT_ICON</string>
+</resources>

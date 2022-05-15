@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.StarFinder" parent="Theme.MaterialComponents.Light">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryDarkColor</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryDarkColor</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/primaryDarkColor</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <style name="Theme.StarFinder.Fullscreen" parent="Theme.StarFinder">
+        <item name="android:actionBarStyle">@style/Widget.Theme.StarFinder.ActionBar.Fullscreen
+        </item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+    <style name="ThemeOverlay.StarFinder.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/primaryLightColor</item>
+        <item name="fullscreenTextColor">@color/black</item>
+    </style>
+</resources>

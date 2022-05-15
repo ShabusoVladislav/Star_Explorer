@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/primaryLightColor"
+    tools:context=".MenuActivity">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_controller"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="@string/hand_controller"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/secondaryColor"
+        app:rippleColor="@color/secondaryDarkColor"
+        app:cornerRadius="10dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_stars"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/secondaryColor"
+        android:text="@string/list_of_stars"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_controller"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/btn_controller"
+        app:layout_constraintTop_toBottomOf="@+id/btn_controller"
+        app:rippleColor="@color/secondaryDarkColor" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_about"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/secondaryColor"
+        android:text="@string/about"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_stars"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="@+id/btn_stars"
+        app:layout_constraintTop_toBottomOf="@+id/btn_stars"
+        app:rippleColor="@color/secondaryDarkColor" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_disconnect_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="@string/disconnect"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="#ff0000"
+        android:textColor="@color/primaryLightColor"
+        app:rippleColor="@color/material_red"
+        app:cornerRadius="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

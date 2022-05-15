@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/primaryLightColor"
+    tools:context=".ControllerActivity">
+
+    <RelativeLayout
+        android:id="@+id/frame_pipe_controls"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/btn_pipe_up"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="130dp"
+            android:text="@string/up"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_pipe_left"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_below="@+id/btn_pipe_up"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/left"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_pipe_right"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_below="@+id/btn_pipe_up"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="50dp"
+            android:text="@string/right"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_pipe_down"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_below="@+id/btn_pipe_left"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="50dp"
+            android:text="@string/down"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

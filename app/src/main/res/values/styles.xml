@@ -1,0 +1,13 @@
+<resources>
+
+    <style name="Widget.Theme.StarFinder.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Widget.Theme.StarFinder.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
+</resources>
