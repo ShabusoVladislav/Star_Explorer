@@ -47,7 +47,7 @@ public class ReceiveThread extends Thread{
         try{
             outputStream.write(byteArr);
         } catch (IOException e){
-
+            Log.d(TAG, "Не удалось отправить данные");
         }
     }
 

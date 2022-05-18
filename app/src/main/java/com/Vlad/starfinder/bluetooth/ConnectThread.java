@@ -11,7 +11,7 @@ import android.os.Looper;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.Vlad.starfinder.MenuActivity;
+import com.Vlad.starfinder.activities.MenuActivity;
 import com.Vlad.starfinder.R;
 
 import java.io.IOException;

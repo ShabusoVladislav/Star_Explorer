@@ -1,4 +1,4 @@
-package com.Vlad.starfinder;
+package com.Vlad.starfinder.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.Vlad.starfinder.R;
 import com.Vlad.starfinder.adapters.StarsListAdapter;
 import com.Vlad.starfinder.database.DatabaseHelper;
 
@@ -96,7 +97,6 @@ public class StarsActivity extends AppCompatActivity {
         if(myCursor.getCount() == 0){
             Toast.makeText(this, "Нет данных о звездах", Toast.LENGTH_SHORT).show();
         } else {
-
             while(myCursor.moveToNext()){
                 stars_id.add(myCursor.getInt(0));
                 stars_name.add(String.join(" ", myCursor.getString(1).split("_")));

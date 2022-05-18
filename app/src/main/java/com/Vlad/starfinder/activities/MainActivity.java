@@ -1,4 +1,4 @@
-package com.Vlad.starfinder;
+package com.Vlad.starfinder.activities;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
@@ -27,6 +27,7 @@ import android.widget.ProgressBar;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import com.Vlad.starfinder.R;
 import com.Vlad.starfinder.adapters.BtListAdapter;
 import com.Vlad.starfinder.bluetooth.ConnectThread;
 
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements
     private ListView listBtDevices;
 
     private BluetoothAdapter bluetoothAdapter;
+    private IntentFilter filter;
     private BtListAdapter listAdapter;
     private ArrayList<BluetoothDevice> bluetoothDevices;
 
@@ -65,14 +67,12 @@ public class MainActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
-
         //Если Bluetooth не поддерживается
         if (bluetoothAdapter == null){
             Toast.makeText(this, R.string.bluetooth_not_supported, Toast.LENGTH_SHORT).show();
             Log.d(TAG, "onCreate: " + getString(R.string.bluetooth_not_supported));
             finish();
         }
-
         //Если Bluetooth уже был включен
         if (bluetoothAdapter != null){
             if(bluetoothAdapter.isEnabled()){
@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements
         unregisterReceiver(receiver);
 
         if(connectThread != null){
-            connectThread.closeConnection();
+            ConnectThread.closeConnection();
         }
 
         if(ConnectThread.getRThread() != null){
@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements
 
         bluetoothDevices = new ArrayList<>();
 
-        IntentFilter filter = new IntentFilter();
+        filter = new IntentFilter();
         filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_STARTED);
         filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_FINISHED);
         filter.addAction(BluetoothDevice.ACTION_FOUND);
@@ -249,7 +249,7 @@ public class MainActivity extends AppCompatActivity implements
         }
     }
 
-    private BroadcastReceiver receiver = new BroadcastReceiver() {
+    private final BroadcastReceiver receiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             final String action = intent.getAction();
@@ -298,7 +298,7 @@ public class MainActivity extends AppCompatActivity implements
 
     @SuppressLint("MissingSuperCall")
     @Override
-    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         switch (requestCode) {
             case REQUEST_CODE_LOC:
                 if (grantResults.length > 0) {

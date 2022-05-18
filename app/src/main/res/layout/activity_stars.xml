@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primaryLightColor"
-    tools:context=".StarsActivity">
+    tools:context=".activities.StarsActivity">
 
     <TextView
         android:id="@+id/stars_count"

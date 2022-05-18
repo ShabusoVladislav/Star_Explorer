@@ -1,4 +1,4 @@
-package com.Vlad.starfinder;
+package com.Vlad.starfinder.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.Vlad.starfinder.R;
 import com.Vlad.starfinder.bluetooth.ConnectThread;
 import com.Vlad.starfinder.bluetooth.ReceiveThread;
 

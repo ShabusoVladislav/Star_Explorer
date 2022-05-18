@@ -1,4 +1,4 @@
-package com.Vlad.starfinder;
+package com.Vlad.starfinder.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.Vlad.starfinder.R;
 import com.Vlad.starfinder.bluetooth.ConnectThread;
 
 public class ControllerActivity extends AppCompatActivity implements View.OnClickListener {
@@ -61,7 +62,8 @@ public class ControllerActivity extends AppCompatActivity implements View.OnClic
         if(view.equals(btnPipeUp)){
             ConnectThread.sendMessage("1+");
             Log.d(TAG, "UP");
-        }else if(view.equals(btnPipeDown)){
+        }
+        else if(view.equals(btnPipeDown)){
             ConnectThread.sendMessage("2+");
             Log.d(TAG, "DOWN");
         }else if(view.equals(btnPipeLeft)){

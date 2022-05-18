@@ -1,4 +1,4 @@
-package com.Vlad.starfinder;
+package com.Vlad.starfinder.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+
+import com.Vlad.starfinder.R;
 
 public class AboutActivity extends AppCompatActivity implements View.OnClickListener {
 
